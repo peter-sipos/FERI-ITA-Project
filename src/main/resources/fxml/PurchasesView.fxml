@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.school.ita.ita3.view.controller.PurchasesViewController">
+   <center>
+      <AnchorPane prefHeight="400.0" prefWidth="600.0">
+         <children>
+            <Label layoutX="215.0" layoutY="40.0" text="My Purchases">
+               <font>
+                  <Font size="28.0" />
+               </font></Label>
+            <TableView fx:id="purchasesTableView" layoutX="201.0" layoutY="106.0" prefHeight="200.0" prefWidth="200.0">
+              <columns>
+                <TableColumn fx:id="purchaseIdColumn" prefWidth="97.0" text="Purchase ID" />
+                <TableColumn fx:id="totalPriceColumn" prefWidth="102.0" text="Total Price" />
+              </columns>
+               <contextMenu>
+                  <ContextMenu>
+                    <items>
+                      <MenuItem fx:id="purchaseDetails" mnemonicParsing="false" onAction="#showPurchaseDetails" text="See Purchase Detail" />
+                    </items>
+                  </ContextMenu>
+               </contextMenu>
+            </TableView>
+         </children>
+      </AnchorPane>
+   </center>
+   <top>
+      <ButtonBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <buttons>
+            <Button fx:id="customerViewButton" mnemonicParsing="false" onAction="#showCustomerView" text="Customer View" />
+            <Button fx:id="productsViewButton" mnemonicParsing="false" onAction="#showProductsView" text="Products" />
+            <Button fx:id="logoutButton" mnemonicParsing="false" onAction="#logout" text="Logout" />
+        </buttons>
+      </ButtonBar>
+   </top>
+</BorderPane>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.school.ita.ita3.view.controller.LoginController">
+   <children>
+      <Button fx:id="loginButton" layoutX="159.0" layoutY="288.0" mnemonicParsing="false" onAction="#login" text="LOG IN" />
+      <Label layoutX="119.0" layoutY="70.0" text="WELCOME">
+         <font>
+            <Font size="28.0" />
+         </font></Label>
+      <Button fx:id="registerButton" layoutX="376.0" layoutY="288.0" mnemonicParsing="false" onAction="#register" text="REGISTER" />
+      <TextField fx:id="emailField" layoutX="112.0" layoutY="143.0" />
+      <PasswordField fx:id="passwordField" layoutX="112.0" layoutY="211.0" />
+      <Label layoutX="112.0" layoutY="120.0" text="Email" />
+      <Label layoutX="114.0" layoutY="186.0" text="Password" />
+   </children>
+</AnchorPane>
